@@ -24,6 +24,7 @@ The portfolio showcases my background, featured projects, live GitHub repositori
 | **Visit Timer** | Displays how long the current visitor has been on the site, updating every second |
 | **Visitor Name** | Visitors can enter their name; it is saved to localStorage and shown as a greeting in the navbar |
 | **Visitor Greeting** | Personalized greeting appears in the navigation bar after the visitor saves their name |
+| **GitHub API** | Fetches live public repositories using `https://api.github.com/users/Abdullah-Zh/repos`; displays name, description, language, and star count with a static fallback if the request fails |
 
 ---
 
