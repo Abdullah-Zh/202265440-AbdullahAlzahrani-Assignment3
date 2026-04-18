@@ -138,6 +138,24 @@ After opening the portfolio in your browser:
 
 ---
 
+## API Integration
+
+This project connects to the **GitHub REST API** to fetch and display live repository data.
+
+**Endpoint used:**
+```
+https://api.github.com/users/Abdullah-Zh/repos?sort=updated&per_page=6
+```
+
+**How it works:**
+- On page load, the site fetches the 6 most recently updated public repositories from the GitHub account
+- Each repository is displayed as a card showing the name, description, language, and star count
+- Forked repositories are filtered out so only original work is shown
+- If the API request fails (e.g. network error or rate limit), a set of static fallback cards is shown automatically so the section is never empty
+- A retry button allows the user to re-fetch without reloading the page
+
+---
+
 ## AI Tools Summary
 
 AI tools (Claude by Anthropic) were used to assist with code generation, debugging, and documentation. All AI-generated content was reviewed, understood, and modified before inclusion.
