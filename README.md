@@ -1,55 +1,151 @@
-# 202265440-AbdullahAlzahrani-assignment3
+# 202265440-AbdullahAlzahrani-Assignment3
 
 **Abdullah Alzahrani** | Student ID: 202265440  
-SWE Foundation — Web Engineering | Assignment 3: Advanced Functionality  
+Software Engineering — King Fahd University of Petroleum & Minerals (KFUPM)  
+Course: SWE Foundation | Assignment 3 — Advanced Functionality
 
 ---
 
 ## Project Description
 
-A personal portfolio website built with vanilla HTML, CSS, and JavaScript. Assignment 3 extends the Assignment 2 foundation with advanced features including project sorting, visit-duration tracking, visitor name persistence, and improved state management.
+This is the third phase of my personal portfolio website, building on Assignments 1 and 2. The goal of this assignment was to strengthen the application with **advanced JavaScript features**, external API integration, complex logic, proper state management, and performance optimizations.
 
-**Live features:**
-- GitHub API integration (live repository list)
-- Project filter + sort (by tag and name)
-- Visit timer and visitor name (localStorage)
-- Light/dark theme with persistence
-- Scroll reveal, 3D tilt, magnetic buttons
-- Contact form with full validation
-- Interactive particle background canvas
+The portfolio showcases my background, featured projects, live GitHub repositories, and a validated contact form — now enhanced with project sorting, a live visit timer, and visitor name persistence across sessions.
+
+**Live Site:** *(Deploy to GitHub Pages — link will appear here once published)*
+
+---
+
+## Features Added in Assignment 3
+
+| Feature | Description |
+|---|---|
+| **Project Sort** | Sort projects by name A→Z or Z→A, works alongside the existing filter and search |
+| **Visit Timer** | Displays how long the current visitor has been on the site, updating every second |
+| **Visitor Name** | Visitors can enter their name; it is saved to localStorage and shown as a greeting in the navbar |
+| **Visitor Greeting** | Personalized greeting appears in the navigation bar after the visitor saves their name |
+
+---
+
+## All Features (Assignments 1–3)
+
+| Feature | Description |
+|---|---|
+| **Project Filter** | Click tag buttons (Figma, Java, Design Patterns, UML) to filter projects instantly |
+| **Project Search** | Type in the search bar to filter projects in real time |
+| **Project Sort** | Sort visible projects by name A→Z or Z→A |
+| **GitHub API** | Fetches live public repositories with loading, error, and empty states |
+| **Form Validation** | Full client-side validation with inline error messages |
+| **Scroll Reveal** | Sections animate in as the user scrolls using IntersectionObserver |
+| **Theme Toggle** | Light/dark mode persisted to localStorage across sessions |
+| **Visit Timer** | Live counter showing how long the visitor has been on the page |
+| **Visitor Name** | Saves visitor's name to localStorage and displays a personalized greeting |
+| **Particle Canvas** | Interactive animated background that reacts to mouse movement |
+| **3D Tilt Effect** | Project cards and profile image tilt based on cursor position |
+| **Magnetic Buttons** | Buttons shift slightly toward the cursor for a premium feel |
+| **Responsive Design** | Works on mobile, tablet, and desktop |
+
+---
+
+## Folder Structure
+
+```
+202265440-AbdullahAlzahrani-Assignment3/
+├── index.html                  # Main HTML file
+├── README.md                   # This file
+├── .gitignore
+├── css/
+│   └── styles.css              # All styles with CSS variables
+├── js/
+│   └── script.js               # All JavaScript functionality
+├── assets/
+│   ├── profile.png             # Profile photo
+│   └── Abdullah-Alzahrani-CV.pdf
+└── docs/
+    ├── ai-usage-report.md      # AI tools documentation
+    └── technical-documentation.md  # Technical details
+```
 
 ---
 
 ## Setup Instructions
 
-```bash
-git clone https://github.com/Abdullah-Zh/202265440-AbdullahAlzahrani-assignment3.git
-cd 202265440-AbdullahAlzahrani-assignment3
-open index.html   # or double-click the file
-```
+### Run Locally
 
-No build step, no dependencies. Works in any modern browser.
+This is a **static website** — no build tools, no dependencies, no installation required.
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Abdullah-Zh/202265440-AbdullahAlzahrani-Assignment3.git
+   ```
+
+2. **Navigate into the folder:**
+   ```bash
+   cd 202265440-AbdullahAlzahrani-Assignment3
+   ```
+
+3. **Open in browser:**
+   - **Option A (Recommended):** Use the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension in VS Code. Right-click `index.html` → "Open with Live Server".
+   - **Option B:** Double-click `index.html` to open directly in your browser.
+   - **Option C:** Use Python's built-in server:
+     ```bash
+     python3 -m http.server 8080
+     # Then visit http://localhost:8080
+     ```
+
+### Deploy to GitHub Pages
+
+1. Push the repository to GitHub.
+2. Go to **Settings → Pages**.
+3. Set Source to **Deploy from a branch → main → / (root)**.
+4. GitHub Pages will publish the site automatically.
 
 ---
 
-## AI Usage Summary
+## How to Use
 
-This assignment was developed with the assistance of **Claude (Anthropic)**. AI was used for:
-- Generating initial code scaffolds for new features (sort, timer, visitor name)
-- Debugging layout and logic issues
-- Suggesting CSS patterns consistent with the existing design system
+After opening the portfolio in your browser:
 
-All AI-generated code was reviewed, tested, and modified. Full details in [`docs/ai-usage-report.md`](docs/ai-usage-report.md).
+1. Use the navigation bar to jump to the About, Projects, GitHub, and Contact sections.
+2. Watch the hero section for the dynamic greeting that changes based on the time of day.
+3. Click the theme toggle to switch between light and dark mode; your preference is saved for future visits.
+4. Enter your name in the visitor widget at the bottom of the page and click Save; your name will appear as a greeting in the navbar and be remembered on your next visit.
+5. Watch the visit timer in the visitor widget to see how long you have been on the page.
+6. In the Projects section, use the filter buttons to show projects by category such as Figma, Java, Design Patterns, or UML.
+7. Type in the project search bar to filter projects instantly by matching text.
+8. Use the Sort dropdown to reorder visible projects by name A→Z or Z→A.
+9. If no project matches the selected filter or search term, a no-results message will appear automatically.
+10. Open the GitHub section to view public repositories loaded from the GitHub API, including repository name, description, language, and star count.
+11. If the GitHub request fails, the page will still show fallback repository cards so the section does not stay empty.
+12. Use the CV section or the hero button to download the PDF resume.
+13. Fill out the contact form with your name, email, and message; validation feedback appears immediately for missing or invalid input.
+14. Submit the form to see the simulated sending state and the success message after validation passes.
+15. Scroll through the page to see reveal animations, the scroll progress indicator, and the scroll-to-top button.
+16. On desktop, hover over buttons, cards, and the profile image to see tilt and magnetic motion effects.
 
 ---
 
-## Assignment 3 Checklist
+## Technologies Used
 
-- [x] Repository setup with correct naming and structure
-- [x] External API integration (GitHub API)
-- [x] Complex logic (filter + sort, form validation)
-- [x] State management (theme, visitor name, localStorage)
-- [x] Performance optimizations (lazy loading, passive listeners, GPU-animated CSS)
-- [x] AI integration with documented usage
-- [x] Clean code with comments
-- [x] README and technical documentation
+- **HTML5** — Semantic structure, accessibility attributes (ARIA roles, labels)
+- **CSS3** — Custom properties (CSS variables), Flexbox, Grid, animations, media queries
+- **Vanilla JavaScript (ES6+)** — No frameworks or libraries
+- **GitHub REST API** — Fetches public repository data dynamically
+- **Google Fonts** — DM Serif Display, DM Mono, DM Sans
+- **IntersectionObserver API** — Scroll-triggered reveal animations
+- **localStorage API** — Theme preference and visitor name persistence
+- **Canvas API** — Interactive particle background
+
+---
+
+## AI Tools Summary
+
+AI tools (Claude by Anthropic) were used to assist with code generation, debugging, and documentation. All AI-generated content was reviewed, understood, and modified before inclusion.
+
+See **[docs/ai-usage-report.md](docs/ai-usage-report.md)** for the full report.
+
+---
+
+## Academic Integrity
+
+This project was completed individually in accordance with KFUPM academic integrity policies. AI tools were used as a learning aid and are fully documented as required by the assignment guidelines.
